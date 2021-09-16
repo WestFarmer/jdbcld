@@ -10,7 +10,7 @@ A Java agent to find JDBC connection leak
   
   jdbcld start a lightweight http server to server a web page, for users to check how many connection is still in use and who created them.
   
-  [demo.png]
+  ![demo](demo.png?raw=true "report")
 
 ## usage
 
