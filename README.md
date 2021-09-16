@@ -6,7 +6,11 @@ A Java agent to find JDBC connection leak
   2. Connection pool libraries can help to prevent leak, but again can't help to trace down to real cause, even though some connection pool libraries has such feature, switch to them may not be a option for some people.
 
 ## how
-  jdbcld use java instrumention, run as a side agent, so it will not 
+  jdbcld use java instrumention to intercept jdbc connection creation and closing event. When a connection is created we will record it's hash code and corresponding call stack, when a connection is closed(or return to pool), we remove it from records. 
+  
+  jdbcld start a lightweight http server to server a web page, for users to check how many connection is still in use and who created them.
+  
+  [docs/demo.png]
 
 ## usage
 
